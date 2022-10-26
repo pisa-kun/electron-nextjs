@@ -17,12 +17,20 @@ const AboutPage = () =>  {
         <h1>{isShow ? `ON` : `OFF`}</h1>
       </div>
       <div>
-        <button onClick={()=> setIsShow(true)}>change</button>
+        <button onClick={()=> setIsShow(!isShow)}>change</button>
       </div>
     </p>
-    <Image src="/images/loading-l-5.gif" width={64} height={64}/>
+    <>{ShowLoading(isShow)}</>
     <Image src="/images/run_gopher.ico" width={128} height={128}/>
   </Layout>
 )};
+
+const ShowLoading = (props) => {
+  if(props) {
+    return (
+        <Image src="/images/loading-l-5.gif" width={64} height={64}/>
+    );
+  }
+}
 
 export default AboutPage
