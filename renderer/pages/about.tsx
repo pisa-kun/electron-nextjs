@@ -2,9 +2,11 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import { useState } from "react";
+import { cwd } from 'process';
 
 const AboutPage = () =>  {
   const [isShow, setIsShow] = useState(false);
+  const [appName, setBgApp] = useState(process.cwd());
   return (
   <Layout title="About | Next.js + TypeScript + Electron Example">
     <h1>About</h1>
@@ -20,6 +22,7 @@ const AboutPage = () =>  {
         <button onClick={()=> setIsShow(!isShow)}>change</button>
       </div>
     </p>
+    <h3>{appName}</h3>
     <>{ShowLoading(isShow)}</>
     <Image src="/images/run_gopher.ico" width={128} height={128}/>
   </Layout>
