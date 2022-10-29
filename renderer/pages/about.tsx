@@ -24,14 +24,14 @@ const AboutPage = () =>  {
     </p>
     <h3>{appName}</h3>
     <>{ShowLoading(isShow)}</>
-    <Image src="/images/run_gopher.ico" width={128} height={128}/>
+    <img src="/images/run_gopher.ico" width={128} height={128}/>
   </Layout>
 )};
 
 const ShowLoading = (props) => {
   if(props) {
     return (
-        <Image src="/images/loading-l-5.gif" width={64} height={64}/>
+        <img src="/images/loading-l-5.gif" width={64} height={64}/>
     );
   }
 }
