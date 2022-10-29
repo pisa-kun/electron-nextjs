@@ -15,6 +15,9 @@ const AboutPage = () =>  {
       <Link href="/">
         <a>Go home</a>
       </Link>
+      <Link href="/about2">
+        <a>Go about2</a>
+      </Link>
       <div>
         <h1>{isShow ? `ON` : `OFF`}</h1>
       </div>
